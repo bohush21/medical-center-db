@@ -11,7 +11,7 @@ const db = new sqlite3.Database('./MedicalCenter.db', (err) => {
     }
 });
 
-// GET - всі лікарі (Read)
+
 app.get('/doctors', (req, res) => {
     db.all('SELECT * FROM Doctors', [], (err, rows) => {
         if (err) {
