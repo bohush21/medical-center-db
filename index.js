@@ -8,8 +8,9 @@ const db = new sqlite3.Database('./MedicalCenter.db', (err) => {
         console.error('Помилка підключення до БД:', err.message);
     } else {
         console.log('Успішно підключено до бази даних Медичного центру.');
-    
+    } 
 
+});
 
 app.get('/doctors', (req, res) => {
     db.all('SELECT * FROM Doctors', [], (err, rows) => {
